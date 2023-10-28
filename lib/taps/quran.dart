@@ -149,7 +149,7 @@ class QuranTap extends StatelessWidget {
                 return InkWell(
                   onTap: () {
                     Navigator.pushNamed(context, SuraDetails.routeName,
-                        arguments: SuraModel(suraName[index], index));
+                        arguments: SuraModel(index: index , name: suraName[index] ));
                   },
                   child: Text(
                     suraName[index],
