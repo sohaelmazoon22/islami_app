@@ -14,6 +14,14 @@ class MyThemeData {
           bodyLarge: GoogleFonts.elMessiri(
               fontSize: 30,
               fontWeight: FontWeight.bold,
+              color: const Color(0xff242424)),
+          bodyMedium: GoogleFonts.elMessiri(
+              fontSize: 25,
+              fontWeight: FontWeight.bold,
+              color: const Color(0xff242424)),
+          bodySmall: GoogleFonts.elMessiri(
+              fontSize: 20,
+              fontWeight: FontWeight.w200,
               color: const Color(0xff242424))),
       bottomNavigationBarTheme: const BottomNavigationBarThemeData(
         type: BottomNavigationBarType.shifting,
