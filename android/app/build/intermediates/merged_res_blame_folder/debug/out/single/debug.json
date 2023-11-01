@@ -1,0 +1,78 @@
+[
+    {
+        "merged": "com.example.islami_route.app-merged_res-10:/drawable-xhdpi_splash.png.flat",
+        "source": "com.example.islami_route.app-main-12:/drawable-xhdpi/splash.png"
+    },
+    {
+        "merged": "com.example.islami_route.app-merged_res-10:/drawable-ldpi_splash_dark.png.flat",
+        "source": "com.example.islami_route.app-main-12:/drawable-ldpi/splash_dark.png"
+    },
+    {
+        "merged": "com.example.islami_route.app-merged_res-10:/drawable-v21_launch_background.xml.flat",
+        "source": "com.example.islami_route.app-main-12:/drawable-v21/launch_background.xml"
+    },
+    {
+        "merged": "com.example.islami_route.app-merged_res-10:/drawable-xxxhdpi_splash.png.flat",
+        "source": "com.example.islami_route.app-main-12:/drawable-xxxhdpi/splash.png"
+    },
+    {
+        "merged": "com.example.islami_route.app-merged_res-10:/drawable-hdpi_splash_dark.png.flat",
+        "source": "com.example.islami_route.app-main-12:/drawable-hdpi/splash_dark.png"
+    },
+    {
+        "merged": "com.example.islami_route.app-merged_res-10:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.example.islami_route.app-main-12:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.islami_route.app-merged_res-10:/drawable-xxhdpi_splash_dark.png.flat",
+        "source": "com.example.islami_route.app-main-12:/drawable-xxhdpi/splash_dark.png"
+    },
+    {
+        "merged": "com.example.islami_route.app-merged_res-10:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.example.islami_route.app-main-12:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.islami_route.app-merged_res-10:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.example.islami_route.app-main-12:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.islami_route.app-merged_res-10:/drawable_launch_background.xml.flat",
+        "source": "com.example.islami_route.app-main-12:/drawable/launch_background.xml"
+    },
+    {
+        "merged": "com.example.islami_route.app-merged_res-10:/drawable-xxxhdpi_splash_dark.png.flat",
+        "source": "com.example.islami_route.app-main-12:/drawable-xxxhdpi/splash_dark.png"
+    },
+    {
+        "merged": "com.example.islami_route.app-merged_res-10:/drawable-hdpi_splash.png.flat",
+        "source": "com.example.islami_route.app-main-12:/drawable-hdpi/splash.png"
+    },
+    {
+        "merged": "com.example.islami_route.app-merged_res-10:/drawable-xhdpi_splash_dark.png.flat",
+        "source": "com.example.islami_route.app-main-12:/drawable-xhdpi/splash_dark.png"
+    },
+    {
+        "merged": "com.example.islami_route.app-merged_res-10:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.example.islami_route.app-main-12:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.islami_route.app-merged_res-10:/drawable-ldpi_splash.png.flat",
+        "source": "com.example.islami_route.app-main-12:/drawable-ldpi/splash.png"
+    },
+    {
+        "merged": "com.example.islami_route.app-merged_res-10:/drawable-xxhdpi_splash.png.flat",
+        "source": "com.example.islami_route.app-main-12:/drawable-xxhdpi/splash.png"
+    },
+    {
+        "merged": "com.example.islami_route.app-merged_res-10:/drawable-mdpi_splash.png.flat",
+        "source": "com.example.islami_route.app-main-12:/drawable-mdpi/splash.png"
+    },
+    {
+        "merged": "com.example.islami_route.app-merged_res-10:/drawable-mdpi_splash_dark.png.flat",
+        "source": "com.example.islami_route.app-main-12:/drawable-mdpi/splash_dark.png"
+    },
+    {
+        "merged": "com.example.islami_route.app-merged_res-10:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.example.islami_route.app-main-12:/mipmap-xhdpi/ic_launcher.png"
+    }
+]

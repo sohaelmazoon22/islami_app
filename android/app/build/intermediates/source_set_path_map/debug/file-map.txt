@@ -1,0 +1,13 @@
+com.example.islami_route.app-jetified-window-java-1.0.0-beta04-0 C:\Users\SOHA\.gradle\caches\transforms-3\006d93cd422dbc43e89591147c2de572\transformed\jetified-window-java-1.0.0-beta04\res
+com.example.islami_route.app-core-1.6.0-1 C:\Users\SOHA\.gradle\caches\transforms-3\4ca28c4a71705f8a687c69dda140a277\transformed\core-1.6.0\res
+com.example.islami_route.app-jetified-annotation-experimental-1.1.0-2 C:\Users\SOHA\.gradle\caches\transforms-3\8965c941cf4bee4d72541b965c7c9d39\transformed\jetified-annotation-experimental-1.1.0\res
+com.example.islami_route.app-jetified-window-1.0.0-beta04-3 C:\Users\SOHA\.gradle\caches\transforms-3\dee59bb480020f42d53c2ea15e4501f7\transformed\jetified-window-1.0.0-beta04\res
+com.example.islami_route.app-packaged_res-4 C:\Users\SOHA\AppData\Local\Pub\Cache\hosted\pub.dev\path_provider_android-2.2.1\android\build\intermediates\packaged_res\debug
+com.example.islami_route.app-pngs-5 C:\Users\SOHA\StudioProjects\islami_route\android\app\build\generated\res\pngs\debug
+com.example.islami_route.app-resValues-6 C:\Users\SOHA\StudioProjects\islami_route\android\app\build\generated\res\resValues\debug
+com.example.islami_route.app-rs-7 C:\Users\SOHA\StudioProjects\islami_route\android\app\build\generated\res\rs\debug
+com.example.islami_route.app-mergeDebugResources-8 C:\Users\SOHA\StudioProjects\islami_route\android\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir
+com.example.islami_route.app-mergeDebugResources-9 C:\Users\SOHA\StudioProjects\islami_route\android\app\build\intermediates\incremental\debug\mergeDebugResources\stripped.dir
+com.example.islami_route.app-merged_res-10 C:\Users\SOHA\StudioProjects\islami_route\android\app\build\intermediates\merged_res\debug
+com.example.islami_route.app-debug-11 C:\Users\SOHA\StudioProjects\islami_route\android\app\src\debug\res
+com.example.islami_route.app-main-12 C:\Users\SOHA\StudioProjects\islami_route\android\app\src\main\res

@@ -1,0 +1,4 @@
+#Sun Oct 29 18:25:10 EET 2023
+base.0=C\:\\Users\\SOHA\\StudioProjects\\islami_route\\android\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

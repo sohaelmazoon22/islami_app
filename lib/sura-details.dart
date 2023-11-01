@@ -36,23 +36,26 @@ class _SuraDetailsState extends State<SuraDetails> {
                 borderRadius: BorderRadius.circular(5),
                 borderSide: const BorderSide(color: MyThemeData.primary)),
             margin: const EdgeInsets.all(20),
-            child: ListView.separated(
-              separatorBuilder: (context, index) => const Divider(
-                thickness: 1,
-                color: MyThemeData.primary,
-                indent: 40,
-                endIndent: 40,
+            child: Padding(
+              padding: const EdgeInsets.all(18.0),
+              child: ListView.separated(
+                separatorBuilder: (context, index) => const Divider(
+                  thickness: 1,
+                  color: MyThemeData.primary,
+                  indent: 40,
+                  endIndent: 40,
+                ),
+                itemBuilder: (context, index) {
+                  return Directionality(
+                    textDirection: TextDirection.rtl,
+                    child: Text(
+                      "${verses[index]}(${index + 1})",
+                      textAlign: TextAlign.center,
+                    ),
+                  );
+                },
+                itemCount: verses.length,
               ),
-              itemBuilder: (context, index) {
-                return Directionality(
-                  textDirection: TextDirection.rtl,
-                  child: Text(
-                    "${verses[index]}(${index + 1})",
-                    textAlign: TextAlign.center,
-                  ),
-                );
-              },
-              itemCount: verses.length,
             ),
           ),
         ));

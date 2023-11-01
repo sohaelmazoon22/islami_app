@@ -132,7 +132,7 @@ class QuranTap extends StatelessWidget {
             thickness: 2,
             color: MyThemeData.primary,
           ),
-          Text('Sura Name', style: Theme.of(context).textTheme.bodyMedium),
+          Text('Sura Name', style: Theme.of(context).textTheme.bodyLarge),
           const Divider(
             thickness: 2,
             color: MyThemeData.primary,
@@ -154,7 +154,7 @@ class QuranTap extends StatelessWidget {
                   child: Text(
                     suraName[index],
                     textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.bodySmall,
+                    style: Theme.of(context).textTheme.bodyMedium,
                   ),
                 );
               },
