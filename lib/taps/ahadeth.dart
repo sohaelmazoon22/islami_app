@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islami_route/ahadeth-details.dart';
 import 'package:islami_route/ahadeth_model.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../my-themedata.dart';
 
 class AhadethTap extends StatefulWidget {
@@ -26,7 +26,7 @@ class _AhadethTapState extends State<AhadethTap> {
             thickness: 2,
             color: MyThemeData.primary,
           ),
-          Text('Ahadeth Name', style: Theme.of(context).textTheme.bodyLarge),
+          Text(AppLocalizations.of(context)!.ahadeth, style: Theme.of(context).textTheme.bodyLarge),
           const Divider(
             thickness: 2,
             color: MyThemeData.primary,

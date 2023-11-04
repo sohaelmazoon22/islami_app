@@ -3,6 +3,7 @@ import 'package:islami_route/ahadeth-details.dart';
 import 'package:islami_route/home.dart';
 import 'package:islami_route/my-themedata.dart';
 import 'package:islami_route/sura-details.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 
 void main() {
@@ -14,6 +15,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
       debugShowCheckedModeBanner: false,
       initialRoute: HomeScreen.routeName,
       routes: {
