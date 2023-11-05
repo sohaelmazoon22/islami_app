@@ -2,6 +2,8 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:islami_route/bottom-sheet/show_language_bottom_sheet.dart';
 import 'package:islami_route/my-themedata.dart';
+import 'package:islami_route/providers/my_provider.dart';
+import 'package:provider/provider.dart';
 
 class SettingsTap extends StatefulWidget {
   const SettingsTap({super.key});
@@ -13,12 +15,15 @@ class SettingsTap extends StatefulWidget {
 class _SettingsTapState extends State<SettingsTap> {
   @override
   Widget build(BuildContext context) {
+    var provider = Provider.of<MyProvider>(context);
     return Padding(
       padding: const EdgeInsets.all(18.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          const SizedBox(height: 30,),
+          const SizedBox(
+            height: 30,
+          ),
           Text(AppLocalizations.of(context)!.language,
               style: Theme.of(context).textTheme.bodyLarge),
           InkWell(
@@ -32,7 +37,9 @@ class _SettingsTapState extends State<SettingsTap> {
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(color: MyThemeData.primary)),
               child: Text(
-                AppLocalizations.of(context)!.english,
+                provider.local == 'en'
+                    ? AppLocalizations.of(context)!.english
+                    : AppLocalizations.of(context)!.arabic,
                 style: Theme.of(context).textTheme.bodyMedium,
               ),
             ),
