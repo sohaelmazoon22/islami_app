@@ -6,6 +6,10 @@ class MyThemeData {
   static const Color darkColor = Color(0xff0F1424);
   static const Color yellowColor = Color(0xffFACC1D);
   static const Color black = Colors.black;
+  static Color primaryColorDark = const Color.fromRGBO(20, 26, 46, 1.0);
+  static Color secondaryColor = const Color.fromRGBO(183, 147, 95, 1.0);
+  static Color secondaryColorDark = const Color.fromRGBO(250, 204, 29, 1.0);
+
   static ThemeData lightTheme = ThemeData(
     colorScheme: const ColorScheme(
         brightness: Brightness.light,
