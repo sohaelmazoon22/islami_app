@@ -5,8 +5,8 @@ import 'package:islami_route/my-themedata.dart';
 import 'package:islami_route/providers/my_provider.dart';
 import 'package:provider/provider.dart';
 
-class LanguageBottomSheet extends StatelessWidget {
-  const LanguageBottomSheet({super.key});
+class ThemingBottomSheet extends StatelessWidget {
+  const ThemingBottomSheet({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,23 +19,23 @@ class LanguageBottomSheet extends StatelessWidget {
         children: [
           InkWell(
             onTap: () {
-              provider.changeLanguage("en");
+              provider.changeTheme(ThemeMode.light);
               Navigator.pop(context);
             },
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  AppLocalizations.of(context)!.english,
+                  AppLocalizations.of(context)!.light,
                   style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                        color: provider.local == 'en'
-                            ? Theme.of(context).colorScheme.secondary
-                            : Theme.of(context).colorScheme.onSecondary,
-                      ),
+                    color: provider.theme == ThemeMode.light
+                        ? MyThemeData.primaryColor
+                        : Colors.white,
+                  ),
                 ),
-                provider.local == 'en'
-                    ?  Icon(Icons.done,
-                        size: 35, color:Theme.of(context).colorScheme.secondary)
+                provider.theme == ThemeMode.light
+                    ? const Icon(Icons.done,
+                    size: 35, color: MyThemeData.primaryColor)
                     : const SizedBox.shrink(),
               ],
             ),
@@ -45,23 +45,23 @@ class LanguageBottomSheet extends StatelessWidget {
           ),
           InkWell(
             onTap: () {
-              provider.changeLanguage("ar");
+              provider.changeTheme(ThemeMode.dark);
               Navigator.pop(context);
             },
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  AppLocalizations.of(context)!.arabic,
+                  AppLocalizations.of(context)!.dark,
                   style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                        color: provider.local == 'ar'
-                            ? Theme.of(context).colorScheme.secondary
-                            : Theme.of(context).colorScheme.onSecondary,
-                      ),
+                    color: provider.theme == ThemeMode.dark
+                        ? MyThemeData.yellowColor
+                        : MyThemeData.black,
+                  ),
                 ),
-                provider.local == 'ar'
-                    ?  Icon(Icons.done,
-                        size: 35, color: Theme.of(context).colorScheme.secondary)
+                provider.theme == ThemeMode.dark
+                    ? const Icon(Icons.done,
+                    size: 35, color: MyThemeData.yellowColor)
                     : const SizedBox.shrink(),
               ],
             ),

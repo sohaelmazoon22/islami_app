@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart' show rootBundle;
 import 'package:islami_route/my-themedata.dart';
 import 'package:islami_route/models/sura_model.dart';
+import 'package:islami_route/providers/sura-details-provider.dart';
+import 'package:provider/provider.dart';
+import '../providers/my_provider.dart';
 
 class SuraDetails extends StatefulWidget {
   static const String routeName = 'SuraDetails';
@@ -11,60 +13,59 @@ class SuraDetails extends StatefulWidget {
 }
 
 class _SuraDetailsState extends State<SuraDetails> {
-  List<String> verses = [];
-
   Widget build(BuildContext context) {
-    var args = ModalRoute.of(context)?.settings.arguments as SuraModel;
-    if (verses.isEmpty) {
-      loadFiles(args.index!);
-    }
-    return Container(
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage('assets/images/background.png'),
-              fit: BoxFit.fill),
-        ),
-        child: Scaffold(
-          appBar: AppBar(
-            title: Text(
-              args.name!,
-              style: Theme.of(context).textTheme.bodyLarge,
-            ),
-          ),
-          body: Card(
-            shape: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: const BorderSide(color: MyThemeData.primary)),
-            margin: const EdgeInsets.all(20),
-            child: Padding(
-              padding: const EdgeInsets.all(18.0),
-              child: ListView.separated(
-                separatorBuilder: (context, index) => const Divider(
-                  thickness: 1,
-                  color: MyThemeData.primary,
-                  indent: 40,
-                  endIndent: 40,
-                ),
-                itemBuilder: (context, index) {
-                  return Directionality(
-                    textDirection: TextDirection.rtl,
-                    child: Text(
-                      "${verses[index]}(${index + 1})",
-                      textAlign: TextAlign.center,
-                    ),
-                  );
-                },
-                itemCount: verses.length,
-              ),
-            ),
-          ),
-        ));
-  }
 
-  void loadFiles(int index) async {
-    String sura = await rootBundle.loadString('assets/files/${index + 1 }.txt');
-    List<String> lines = sura.split('\n');
-    verses = lines;
-    setState(() {});
+    var args = ModalRoute.of(context)?.settings.arguments as SuraModel;
+    var myProvider = Provider.of<MyProvider>(context);
+
+    return ChangeNotifierProvider(
+        create: (create) => SuraDetailsProvider()..loadFiles(args.index!),
+        builder: (context, child) {
+          var suraProvider = Provider.of<SuraDetailsProvider>(context);
+          return Container(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(myProvider.theme == ThemeMode.light
+                      ? 'assets/images/background.png'
+                      : 'assets/images/darkback.png'),
+                ),
+              ),
+              child: Scaffold(
+                appBar: AppBar(
+                  title: Text(
+                    args.name!,
+                    style: Theme.of(context).textTheme.bodyLarge,
+                  ),
+                ),
+                body: Card(
+                  shape: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(5),
+                      borderSide:
+                          const BorderSide(color: MyThemeData.primaryColor)),
+                  margin: const EdgeInsets.all(20),
+                  child: Padding(
+                    padding: const EdgeInsets.all(18.0),
+                    child: ListView.separated(
+                      separatorBuilder: (context, index) => const Divider(
+                        thickness: 1,
+                        color: MyThemeData.primaryColor,
+                        indent: 40,
+                        endIndent: 40,
+                      ),
+                      itemBuilder: (context, index) {
+                        return Directionality(
+                          textDirection: TextDirection.rtl,
+                          child: Text(
+                            "${suraProvider.verses[index]}(${index + 1})",
+                            textAlign: TextAlign.center,
+                          ),
+                        );
+                      },
+                      itemCount: suraProvider.verses.length,
+                    ),
+                  ),
+                ),
+              ));
+        });
   }
 }

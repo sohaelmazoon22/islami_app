@@ -130,18 +130,18 @@ class QuranTap extends StatelessWidget {
           Image.asset('assets/images/quran_image.png'),
           const Divider(
             thickness: 2,
-            color: MyThemeData.primary,
+            color: MyThemeData.primaryColor,
           ),
           Text(AppLocalizations.of(context)!.suraName, style: Theme.of(context).textTheme.bodyLarge),
           const Divider(
             thickness: 2,
-            color: MyThemeData.primary,
+            color: MyThemeData.primaryColor,
           ),
           Expanded(
             child: ListView.separated(
               separatorBuilder: (context, index) => const Divider(
                 thickness: 1,
-                color: MyThemeData.primary,
+                color: MyThemeData.primaryColor,
                 endIndent: 40,
                 indent: 40,
               ),

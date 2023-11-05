@@ -5,6 +5,8 @@ import 'package:islami_route/my-themedata.dart';
 import 'package:islami_route/providers/my_provider.dart';
 import 'package:provider/provider.dart';
 
+import '../bottom-sheet/show_theming_bottom_sheet.dart';
+
 class SettingsTap extends StatefulWidget {
   const SettingsTap({super.key});
 
@@ -35,7 +37,7 @@ class _SettingsTapState extends State<SettingsTap> {
               padding: const EdgeInsets.symmetric(horizontal: 15),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
-                  border: Border.all(color: MyThemeData.primary)),
+                  border: Border.all(color: MyThemeData.primaryColor)),
               child: Text(
                 provider.local == 'en'
                     ? AppLocalizations.of(context)!.english
@@ -60,9 +62,11 @@ class _SettingsTapState extends State<SettingsTap> {
               padding: const EdgeInsets.symmetric(horizontal: 15),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
-                  border: Border.all(color: MyThemeData.primary)),
+                  border: Border.all(color: MyThemeData.primaryColor)),
               child: Text(
-                AppLocalizations.of(context)!.light,
+                provider.theme == ThemeMode.light
+                    ? AppLocalizations.of(context)!.light
+                    : AppLocalizations.of(context)!.dark,
                 style: Theme.of(context).textTheme.bodyMedium,
               ),
             ),
@@ -87,15 +91,12 @@ class _SettingsTapState extends State<SettingsTap> {
   void showThemingBottomSheet() {
     showModalBottomSheet(
         context: context,
-        isScrollControlled: true,
         shape: const OutlineInputBorder(
             borderSide: BorderSide(color: Colors.transparent),
             borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(18), topRight: Radius.circular(18))),
         builder: (context) {
-          return Container(
-            height: MediaQuery.of(context).size.height * 0.5,
-          );
+          return ThemingBottomSheet();
         });
   }
 }
