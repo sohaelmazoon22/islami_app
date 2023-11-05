@@ -10,6 +10,6 @@ class SebhaTab extends StatefulWidget {
 class _SebhaTabState extends State<SebhaTab> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Column();
   }
 }

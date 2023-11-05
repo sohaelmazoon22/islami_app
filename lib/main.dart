@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:islami_route/ahadeth-details.dart';
-import 'package:islami_route/home.dart';
+import 'package:islami_route/screens/ahadeth-details.dart';
+import 'package:islami_route/screens/home.dart';
 import 'package:islami_route/my-themedata.dart';
-import 'package:islami_route/sura-details.dart';
+import 'package:islami_route/screens/sura-details.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:islami_route/my-themedata.dart';
-import 'package:islami_route/sura_model.dart';
+import 'package:islami_route/models/sura_model.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import '../sura-details.dart';
+import '../screens/sura-details.dart';
 
 class QuranTap extends StatelessWidget {
   List<String> suraName = [

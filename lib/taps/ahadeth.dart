@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:islami_route/ahadeth-details.dart';
-import 'package:islami_route/ahadeth_model.dart';
+import 'package:islami_route/screens/ahadeth-details.dart';
+import 'package:islami_route/models/ahadeth_model.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../my-themedata.dart';
 
